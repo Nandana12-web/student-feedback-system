@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Feedback</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Student Feedbacks</h1>
+
+    <div id="feedbackList"></div>
+
+</div>
+
+<script>
+    let feedbacks = JSON.parse(localStorage.getItem("feedbacks")) || [];
+
+    let output = "";
+
+    if (feedbacks.length === 0) {
+        output = "<p>No feedback submitted yet.</p>";
+    } else {
+
+        feedbacks.forEach(function(feedback) {
+
+            output += `
+                <hr>
+                <p><b>Name:</b> ${feedback.name}</p>
+                <p><b>Course:</b> ${feedback.course}</p>
+                <p><b>Rating:</b> ${feedback.rating}</p>
+                <p><b>Feedback:</b> ${feedback.feedback}</p>
+            `;
+
+        });
+    }
+
+    document.getElementById("feedbackList").innerHTML = output;
+</script>
+
+</body>
+</html>
+
