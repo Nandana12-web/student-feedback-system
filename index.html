@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Feedback System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Student Feedback Form</h1>
+
+        <form id="feedbackForm">
+
+            <label>Student Name</label>
+            <input type="text" id="name" required>
+
+            <label>Course</label>
+            <input type="text" id="course" required>
+
+            <label>Rating</label>
+            <select id="rating" required>
+                <option value="">Select Rating</option>
+                <option value="5">5 - Excellent</option>
+                <option value="4">4 - Very Good</option>
+                <option value="3">3 - Good</option>
+                <option value="2">2 - Average</option>
+                <option value="1">1 - Poor</option>
+            </select>
+
+            <label>Feedback</label>
+            <textarea id="feedback" rows="5" required></textarea>
+
+            <button type="submit">Submit Feedback</button>
+
+        </form>
+
+        <p id="message"></p>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
