@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Feedback System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="feedback-card">
+
+            <h1>Student Feedback</h1>
+
+            <p class="subtitle">
+                We value your feedback
+            </p>
+
+            <form>
+
+                <!-- Student Name -->
+                <div class="form-group">
+                    <label for="name">Student Name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter your name"
+                        required>
+                </div>
+
+                <!-- Course -->
+                <div class="form-group">
+                    <label for="course">Course</label>
+                    <input
+                        type="text"
+                        id="course"
+                        placeholder="Enter your course"
+                        required>
+                </div>
+
+                <!-- Rating -->
+                <div class="form-group">
+                    <label for="rating">How would you rate the course?</label>
+
+                    <select id="rating" required>
+                        <option value="">Select Rating</option>
+                        <option value="5">★★★★★ Excellent</option>
+                        <option value="4">★★★★☆ Very Good</option>
+                        <option value="3">★★★☆☆ Good</option>
+                        <option value="2">★★☆☆☆ Fair</option>
+                        <option value="1">★☆☆☆☆ Poor</option>
+                    </select>
+                </div>
+
+                <!-- Comments -->
+                <div class="form-group">
+                    <label for="comments">Your Feedback</label>
+
+                    <textarea
+                        id="comments"
+                        rows="5"
+                        placeholder="Write your feedback or suggestions..."
+                        required></textarea>
+                </div>
+
+                <!-- Submit -->
+                <button type="submit">
+                    Submit Feedback
+                </button>
+
+            </form>
+
+            <a href="index.html" class="back-link">
+                ← Back to Home
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
